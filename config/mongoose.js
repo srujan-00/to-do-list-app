@@ -5,3 +5,4 @@ async function main() {
     console.log('connected to mongodb successfully');
 
 }
+module.exports = mongoose;
