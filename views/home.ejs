@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <form action="/add" method="post" >
+        <label for="taskdescription"></label>
+        <input type="textarea" id="taskdescription" name="description">
+        <select name="category" id="">
+            <option value="work">work</option>
+            <option value="personal">personal</option>
+            <option value="school">school</option>
+        </select>
+        <label for="dueDate"></label>
+        <input type="date" id = "dueDate" name = "dueDate">
+        <button type="submit">add</button>
+       
+    </form>
+   
+</body>
+</html>
