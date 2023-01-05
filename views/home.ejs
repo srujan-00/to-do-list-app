@@ -7,7 +7,7 @@
     <title><%= title %></title>
 </head>
 <body>
-    <form action="/add" method="post" >
+    <form action="/tasks/add" method="post" >
         <label for="taskdescription"></label>
         <input type="textarea" id="taskdescription" name="description">
         <select name="category" id="">
@@ -19,6 +19,13 @@
         <input type="date" id = "dueDate" name = "dueDate">
         <button type="submit">add</button>
        
+    </form>
+    <form action="/tasks/delete" method="get">
+        <%for(let task of task_list){ %>
+        <label for="<%=task._id%>"><div><%=task.description%></div><div><%=task.category%></div><%=task.dueDate%><div></div></label>
+        <input type="checkbox" name="id" id="<%=task._id%>" value="<%=task._id%>">
+        <%}%>
+        <button type="submit">delete</button>
     </form>
    
 </body>
