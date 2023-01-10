@@ -5,6 +5,7 @@ const port = 8000;
 const mongoose = require('./config/mongoose');
 const task = require('./models/task');
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static('assets'));
 app.use('/', require('./routes'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
